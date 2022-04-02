@@ -1,51 +1,32 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
 plugins {
-    id 'com.android.application'
-}
+    id 'com.android.application' version '7.1.2' apply false
+    id 'com.android.library' version '7.1.2' apply false
+    apply plugin: 'com.android.application'
 
-android {
-    compileSdk 32
+// Add this line
+    apply plugin: 'com.google.gms.google-services'
 
-    defaultConfig {
-        applicationId "com.example.hs"
-        minSdk 28
-        targetSdk 32
-        versionCode 1
-        versionName "1.0"
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        multiDexEnabled true
-    }
-     compileOptions
-             {
-                 coreLibraryDesugaringEnabled true
-                 sourceCompatibility JavaVersion.VERSION_1_8
-                 targetCompatibility JavaVersion.VERSION_1_8
-             }
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-    }
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
-    buildFeatures {
-        viewBinding true
+    dependencies {
+        // Import the Firebase BoM
+        implementation platform('com.google.firebase:firebase-bom:29.2.1')
+
+
+        // Add the dependencies for the desired Firebase products
+        // https://firebase.google.com/docs/android/setup#available-libraries
+        // Declare the dependency for the Firebase SDK for Google Analytics
+        implementation 'com.google.firebase:firebase-analytics'
+
+        // Declare the dependencies for any other desired Firebase products
+        // For example, declare the dependencies for Firebase Authentication and Cloud Firestore
+        implementation 'com.google.firebase:firebase-auth'
+        implementation 'com.google.firebase:firebase-firestore'
+        implementation 'com.google.firebase:firebase-storage'
+
     }
 }
 
-dependencies {
-
-    implementation 'androidx.appcompat:appcompat:'
-    implementation 'com.google.android.material:material:'
-    implementation 'androidx.constraintlayout:constraintlayout:'
-    implementation 'androidx.navigation:navigation-fragment:'
-    implementation 'androidx.navigation:navigation-ui:'
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:'
-    implementation 'com.google.android.material:material:1.5.0'
-    implementation 'com.android.support:multidex:1.0.3'
+task clean(type: Delete) {
+    delete rootProject.buildDir
 }
