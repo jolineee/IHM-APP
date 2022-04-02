@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">hs</string>
+    <string name="Welcome_to_this_application">Welcome to this application</string>
+    <string name="welcome_to_this_application">welcome_to_this_application</string>
+    <string name="enter_your_password">Enter your password</string>
+    <string name="enter_your_email">Enter your email</string>
+    <string name="don_t_have_an_account_login">Don\'t have an account?login</string>
+    <string name="admin_login">Admin login</string>
+    <string name="sign_in_now">Sign In Now</string>
+    <string name="welcome_to_this_application">welcome_to_this_application</string>
+    <string name="patient_registation">patient Registation</string>
+    <string name="patient_registration">Patient Registration</string>
+    <string name="enter_your_id_number">Enter your ID Number</string>
+    <string name="enter_your_full_name">Enter your full name</string>
+    <string name="have_an_account_login">Have an account/login</string>
+    <string name="register_now">Register now</string>
+    <string name="enter_your_phone_number">Enter your Phone Number</string>
+    <string name="doctor_registration">Doctor_registration</string>
+<string-array name="timeframes">
+    <items>Select time you are available</items>
+    <item>7-9AM</item>
+    <item>9-11AM</item>
+    <item>11-1PM</item>
+    <item>2-4PM</item>
+    <item>4-6PM</item>
+
+</string-array>
+    <string-array name="Departments">
+        <items>Select Department</items>
+        <item>Dentistry</item>
+        <item>Surgery</item>
+
+    </string-array>
+
+    <string-array name="Specialization">
+<items>Select the Specialization</items>
+<item>General</item>
+<item>Pediatrition</item>
+
+</string-array>
+</resources>
